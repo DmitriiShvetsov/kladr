@@ -9,10 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.test</groupId>
-	<artifactId>kladr</artifactId>
+	<artifactId>serviceDatabase</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>kladr</name>
-	<description>description</description>
+	<name>serviceDatabase</name>
 
 	<properties>
 		<java.version>11</java.version>

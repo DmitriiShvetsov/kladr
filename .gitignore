@@ -1,5 +1,15 @@
 target/*
 .idea/*
+
+gateway/target/*
+gateway/.mvn/*
+
+serviceDadata/target/*
+serviceDadata/.mvn/*
+
+serviceDatabase/target/*
+serviceDatabase/.mvn/*
+
 *.swp
 *.iml
 core/*.log
