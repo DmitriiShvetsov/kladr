@@ -1,8 +1,8 @@
 target/*
 .idea/*
 
-gateway/target/*
-gateway/.mvn/*
+gateway-service-config/target/*
+gateway-service-config/.mvn/*
 
 serviceDadata/target/*
 serviceDadata/.mvn/*
