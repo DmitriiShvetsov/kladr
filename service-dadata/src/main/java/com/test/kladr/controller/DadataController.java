@@ -20,7 +20,7 @@ public class DadataController {
         this.kladrServiceDadata = kladrServiceDadata;
     }
 
-    @GetMapping(value = "/dadata/{codeKladr}")
+    @GetMapping(value = "/{codeKladr}")
     public ResponseEntity<Kladr> read(@PathVariable(name = "codeKladr") long codeKladr) {
         final Kladr kladr = kladrServiceDadata.getKladrByCodeKladr(codeKladr);
 

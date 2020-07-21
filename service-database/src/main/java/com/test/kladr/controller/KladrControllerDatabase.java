@@ -22,7 +22,7 @@ public class KladrControllerDatabase {
         this.kladrServiceDatabase = kladrServiceDatabase;
     }
 
-    @GetMapping(value = "/database")
+    @GetMapping(value = "/all")
     public ResponseEntity<List<Kladr>> getAll() {
         final List<Kladr> kladrs = kladrServiceDatabase.findAll();
 
@@ -31,7 +31,7 @@ public class KladrControllerDatabase {
                 : new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
 
-    @GetMapping(value = "/database/{codeKladr}")
+    @GetMapping(value = "/{codeKladr}")
     public ResponseEntity<Kladr> read(@PathVariable(name = "codeKladr") long codeKladr) {
         final Kladr kladr = kladrServiceDatabase.getKladrByCodeKladr(codeKladr);
 

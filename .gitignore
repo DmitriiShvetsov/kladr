@@ -1,14 +1,19 @@
 target/*
+logs/*
+
 .idea/*
 
 gateway-service-config/target/*
+gateway-service-config/logs/*
 gateway-service-config/.mvn/*
 
-serviceDadata/target/*
-serviceDadata/.mvn/*
+service-dadata/target/*
+service-dadata/logs/*
+service-dadata/.mvn/*
 
-serviceDatabase/target/*
-serviceDatabase/.mvn/*
+service-database/target/*
+service-database/logs/
+service-database/.mvn/*
 
 *.swp
 *.iml
