@@ -32,12 +32,10 @@ public class KladrControllerDatabase {
     }
 
     @GetMapping(value = "/{codeKladr}")
-    public ResponseEntity<Kladr> read(@PathVariable(name = "codeKladr") long codeKladr) {
+    public Kladr read(@PathVariable(name = "codeKladr") long codeKladr) {
         final Kladr kladr = kladrServiceDatabase.getKladrByCodeKladr(codeKladr);
 
-        return kladr != null
-                ? new ResponseEntity<>(kladr, HttpStatus.OK)
-                : new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        return kladr ;
     }
 
 }

@@ -19,6 +19,13 @@ spring:
             - Path=/database/**
           filters:
             - RewritePath=/database/(?<path>.*), /$\{path}
+        - id: service-route
+          uri: lb://service-route
+          predicates:
+            - Path=/kladr/**
+          filters:
+            - RewritePath=/kladr/(?<path>.*), /$\{path}
+
 
 logging.level.com.netflix: DEBUG
     

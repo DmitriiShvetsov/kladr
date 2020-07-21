@@ -32,7 +32,7 @@
 				<pattern>
 					<pattern>
 						{
-						"appName": "account-service"
+						"appName": "database-service"
 						}
 					</pattern>
 				</pattern>
