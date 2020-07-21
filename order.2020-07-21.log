@@ -1,0 +1,108 @@
+23:39:04.376 INFO  Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$5761d6e0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+23:39:04.386 INFO  Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$7db841b8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+23:39:08.529 INFO  Located property source: CompositePropertySource {name='consul', propertySources=[ConsulPropertySource {name='config/dadata-service,zone1/'}, ConsulPropertySource {name='config/dadata-service/'}, ConsulPropertySource {name='config/application,zone1/'}, ConsulPropertySource {name='config/application/'}]}
+23:39:13.487 INFO  The following profiles are active: zone1
+23:39:14.038 WARN  Endpoint ID 'bus-env' contains invalid characters, please migrate to a valid format.
+23:39:14.216 WARN  Endpoint ID 'bus-refresh' contains invalid characters, please migrate to a valid format.
+23:39:14.270 WARN  Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+23:39:14.487 INFO  BeanFactory id=ec9a3eec-60cc-3ba0-8d56-29d6fbfabc3e
+23:39:14.551 INFO  No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+23:39:14.555 INFO  No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+23:39:14.559 INFO  No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+23:39:14.600 INFO  Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$5761d6e0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+23:39:14.851 INFO  Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+23:39:14.865 INFO  Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+23:39:14.924 INFO  Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+23:39:14.938 INFO  Bean 'org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration' of type [org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+23:39:14.946 INFO  Bean 'org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration' of type [org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+23:39:14.951 INFO  Bean 'mbeanServer' of type [com.sun.jmx.mbeanserver.JmxMBeanServer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+23:39:14.993 INFO  Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$7db841b8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+23:39:15.364 INFO  Tomcat initialized with port(s): 8091 (http)
+23:39:15.373 INFO  Initializing ProtocolHandler ["http-nio-8091"]
+23:39:15.374 INFO  Starting service [Tomcat]
+23:39:15.374 INFO  Starting Servlet engine: [Apache Tomcat/9.0.27]
+23:39:15.484 INFO  Initializing Spring embedded WebApplicationContext
+23:39:15.485 INFO  Root WebApplicationContext: initialization completed in 1986 ms
+23:39:15.637 WARN  No URLs will be polled as dynamic configuration sources.
+23:39:15.638 INFO  To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+23:39:15.644 INFO  DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@7fc1fd31
+23:39:16.342 INFO  Initializing ExecutorService 'taskScheduler'
+23:39:16.840 DEBUG Filter 'requestLoggingFilter' configured for use
+23:39:16.877 WARN  No URLs will be polled as dynamic configuration sources.
+23:39:16.877 INFO  To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+23:39:17.081 INFO  Initializing ExecutorService 'applicationTaskExecutor'
+23:39:17.484 INFO  Looking up function 'null' with acceptedOutputTypes: []
+23:39:17.822 WARN  You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+23:39:17.951 INFO  Initializing ExecutorService 'configWatchTaskScheduler'
+23:39:17.971 INFO  Initializing ExecutorService 'catalogWatchTaskScheduler'
+23:39:18.100 INFO  Exposing 2 endpoint(s) beneath base path '/actuator'
+23:39:18.247 INFO  Channel 'dadata-service-1.springCloudBusInput' has 1 subscriber(s).
+23:39:18.359 INFO  Registering MessageChannel nullChannel
+23:39:18.383 INFO  Registering MessageChannel springCloudBusOutput
+23:39:18.438 INFO  Registering MessageChannel errorChannel
+23:39:18.467 INFO  Registering MessageChannel springCloudBusInput
+23:39:18.484 INFO  Registering MessageHandler errorLogger
+23:39:18.502 INFO  Registering MessageHandler org.springframework.cloud.stream.binding.StreamListenerMessageHandler@28b7646
+23:39:18.597 INFO  Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+23:39:18.597 INFO  Channel 'dadata-service-1.errorChannel' has 1 subscriber(s).
+23:39:18.598 INFO  started bean '_org.springframework.integration.errorLogger'
+23:39:18.712 INFO  Located property source: CompositePropertySource {name='consul', propertySources=[ConsulPropertySource {name='config/dadata-service,zone1/'}, ConsulPropertySource {name='config/dadata-service/'}, ConsulPropertySource {name='config/application,zone1/'}, ConsulPropertySource {name='config/application/'}]}
+23:39:23.771 INFO  Adding {message-handler:outbound.springCloudBus} as a subscriber to the 'springCloudBusOutput' channel
+23:39:23.772 INFO  Channel 'dadata-service-1.springCloudBusOutput' has 1 subscriber(s).
+23:39:23.772 INFO  started bean 'outbound.springCloudBus'
+23:39:23.786 INFO  started org.springframework.cloud.consul.binder.ConsulInboundMessageProducer@8942ece
+23:39:23.824 INFO  Starting ProtocolHandler ["http-nio-8091"]
+23:39:23.840 INFO  Tomcat started on port(s): 8091 (http) with context path ''
+23:39:23.854 INFO  Registering service with consul: NewService{id='dadata-service-290584', name='dadata-service', tags=[zone=zone1, secure=false], address='192.168.145.129', meta=null, port=8091, enableTagOverride=null, check=Check{script='null', interval='10s', ttl='null', http='http://192.168.145.129:8091/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null'}, checks=null}
+23:39:23.900 INFO  Started DadataServiceApplication in 21.904 seconds (JVM running for 23.021)
+23:39:24.393 INFO  Initializing Spring DispatcherServlet 'dispatcherServlet'
+23:39:24.394 INFO  Initializing Servlet 'dispatcherServlet'
+23:39:24.440 INFO  Completed initialization in 46 ms
+23:39:24.491 DEBUG Before request [GET /actuator/health, headers=[host:"192.168.145.129:8091", user-agent:"Consul Health Check", accept:"text/plain, text/*, */*", accept-encoding:"gzip", connection:"close"]]
+23:39:24.574 DEBUG REQ:GET /actuator/health, headers=[host:"192.168.145.129:8091", user-agent:"Consul Health Check", accept:"text/plain, text/*, */*", accept-encoding:"gzip", connection:"close"]]
+23:39:34.582 DEBUG Before request [GET /actuator/health, headers=[host:"192.168.145.129:8091", user-agent:"Consul Health Check", accept:"text/plain, text/*, */*", accept-encoding:"gzip", connection:"close"]]
+23:39:34.589 DEBUG REQ:GET /actuator/health, headers=[host:"192.168.145.129:8091", user-agent:"Consul Health Check", accept:"text/plain, text/*, */*", accept-encoding:"gzip", connection:"close"]]
+23:39:44.593 DEBUG Before request [GET /actuator/health, headers=[host:"192.168.145.129:8091", user-agent:"Consul Health Check", accept:"text/plain, text/*, */*", accept-encoding:"gzip", connection:"close"]]
+23:39:44.603 DEBUG REQ:GET /actuator/health, headers=[host:"192.168.145.129:8091", user-agent:"Consul Health Check", accept:"text/plain, text/*, */*", accept-encoding:"gzip", connection:"close"]]
+23:39:54.606 DEBUG Before request [GET /actuator/health, headers=[host:"192.168.145.129:8091", user-agent:"Consul Health Check", accept:"text/plain, text/*, */*", accept-encoding:"gzip", connection:"close"]]
+23:39:54.615 DEBUG REQ:GET /actuator/health, headers=[host:"192.168.145.129:8091", user-agent:"Consul Health Check", accept:"text/plain, text/*, */*", accept-encoding:"gzip", connection:"close"]]
+23:40:04.618 DEBUG Before request [GET /actuator/health, headers=[host:"192.168.145.129:8091", user-agent:"Consul Health Check", accept:"text/plain, text/*, */*", accept-encoding:"gzip", connection:"close"]]
+23:40:04.629 DEBUG REQ:GET /actuator/health, headers=[host:"192.168.145.129:8091", user-agent:"Consul Health Check", accept:"text/plain, text/*, */*", accept-encoding:"gzip", connection:"close"]]
+23:40:14.632 DEBUG Before request [GET /actuator/health, headers=[host:"192.168.145.129:8091", user-agent:"Consul Health Check", accept:"text/plain, text/*, */*", accept-encoding:"gzip", connection:"close"]]
+23:40:14.639 DEBUG REQ:GET /actuator/health, headers=[host:"192.168.145.129:8091", user-agent:"Consul Health Check", accept:"text/plain, text/*, */*", accept-encoding:"gzip", connection:"close"]]
+23:40:24.642 DEBUG Before request [GET /actuator/health, headers=[host:"192.168.145.129:8091", user-agent:"Consul Health Check", accept:"text/plain, text/*, */*", accept-encoding:"gzip", connection:"close"]]
+23:40:24.648 DEBUG REQ:GET /actuator/health, headers=[host:"192.168.145.129:8091", user-agent:"Consul Health Check", accept:"text/plain, text/*, */*", accept-encoding:"gzip", connection:"close"]]
+23:40:30.754 DEBUG Before request [GET /5200400005400, headers=[user-agent:"PostmanRuntime/7.26.1", accept:"*/*", postman-token:"8ed45f35-9ef1-41d4-97b6-3bb5895991fc", host:"192.168.145.129:8091", accept-encoding:"gzip, deflate, br", connection:"keep-alive"]]
+23:40:31.435 DEBUG REQ:GET /5200400005400, headers=[user-agent:"PostmanRuntime/7.26.1", accept:"*/*", postman-token:"8ed45f35-9ef1-41d4-97b6-3bb5895991fc", host:"192.168.145.129:8091", accept-encoding:"gzip, deflate, br", connection:"keep-alive"]]
+23:40:34.651 DEBUG Before request [GET /actuator/health, headers=[host:"192.168.145.129:8091", user-agent:"Consul Health Check", accept:"text/plain, text/*, */*", accept-encoding:"gzip", connection:"close"]]
+23:40:34.659 DEBUG REQ:GET /actuator/health, headers=[host:"192.168.145.129:8091", user-agent:"Consul Health Check", accept:"text/plain, text/*, */*", accept-encoding:"gzip", connection:"close"]]
+23:40:44.662 DEBUG Before request [GET /actuator/health, headers=[host:"192.168.145.129:8091", user-agent:"Consul Health Check", accept:"text/plain, text/*, */*", accept-encoding:"gzip", connection:"close"]]
+23:40:44.667 DEBUG REQ:GET /actuator/health, headers=[host:"192.168.145.129:8091", user-agent:"Consul Health Check", accept:"text/plain, text/*, */*", accept-encoding:"gzip", connection:"close"]]
+23:40:54.671 DEBUG Before request [GET /actuator/health, headers=[host:"192.168.145.129:8091", user-agent:"Consul Health Check", accept:"text/plain, text/*, */*", accept-encoding:"gzip", connection:"close"]]
+23:40:54.677 DEBUG REQ:GET /actuator/health, headers=[host:"192.168.145.129:8091", user-agent:"Consul Health Check", accept:"text/plain, text/*, */*", accept-encoding:"gzip", connection:"close"]]
+23:41:04.680 DEBUG Before request [GET /actuator/health, headers=[host:"192.168.145.129:8091", user-agent:"Consul Health Check", accept:"text/plain, text/*, */*", accept-encoding:"gzip", connection:"close"]]
+23:41:04.688 DEBUG REQ:GET /actuator/health, headers=[host:"192.168.145.129:8091", user-agent:"Consul Health Check", accept:"text/plain, text/*, */*", accept-encoding:"gzip", connection:"close"]]
+23:41:14.692 DEBUG Before request [GET /actuator/health, headers=[host:"192.168.145.129:8091", user-agent:"Consul Health Check", accept:"text/plain, text/*, */*", accept-encoding:"gzip", connection:"close"]]
+23:41:14.701 DEBUG REQ:GET /actuator/health, headers=[host:"192.168.145.129:8091", user-agent:"Consul Health Check", accept:"text/plain, text/*, */*", accept-encoding:"gzip", connection:"close"]]
+23:41:24.703 DEBUG Before request [GET /actuator/health, headers=[host:"192.168.145.129:8091", user-agent:"Consul Health Check", accept:"text/plain, text/*, */*", accept-encoding:"gzip", connection:"close"]]
+23:41:24.712 DEBUG REQ:GET /actuator/health, headers=[host:"192.168.145.129:8091", user-agent:"Consul Health Check", accept:"text/plain, text/*, */*", accept-encoding:"gzip", connection:"close"]]
+23:41:34.723 DEBUG Before request [GET /actuator/health, headers=[host:"192.168.145.129:8091", user-agent:"Consul Health Check", accept:"text/plain, text/*, */*", accept-encoding:"gzip", connection:"close"]]
+23:41:34.731 DEBUG REQ:GET /actuator/health, headers=[host:"192.168.145.129:8091", user-agent:"Consul Health Check", accept:"text/plain, text/*, */*", accept-encoding:"gzip", connection:"close"]]
+23:41:38.219 INFO  stopped org.springframework.cloud.consul.binder.ConsulInboundMessageProducer@8942ece
+23:41:38.219 INFO  Removing {message-handler:outbound.springCloudBus} as a subscriber to the 'springCloudBusOutput' channel
+23:41:38.219 INFO  Channel 'dadata-service-1.springCloudBusOutput' has 0 subscriber(s).
+23:41:38.219 INFO  stopped bean 'outbound.springCloudBus'
+23:41:38.220 INFO  Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+23:41:38.220 INFO  Channel 'dadata-service-1.errorChannel' has 0 subscriber(s).
+23:41:38.220 INFO  stopped bean '_org.springframework.integration.errorLogger'
+23:41:38.222 INFO  Shutting down ExecutorService 'catalogWatchTaskScheduler'
+23:41:38.223 INFO  Shutting down ExecutorService 'configWatchTaskScheduler'
+23:41:38.223 INFO  Deregistering service with consul: dadata-service-290584
+23:41:38.240 INFO  Shutting down ExecutorService 'applicationTaskExecutor'
+23:41:38.243 INFO  Shutting down ExecutorService 'taskScheduler'
+23:41:38.246 INFO  Summary on shutdown: nullChannel
+23:41:38.247 INFO  Summary on shutdown: bean 'springCloudBusOutput'
+23:41:38.247 INFO  Summary on shutdown: bean 'errorChannel'
+23:41:38.247 INFO  Summary on shutdown: bean 'springCloudBusInput'
+23:41:38.247 INFO  Summary on shutdown: bean '_org.springframework.integration.errorLogger.handler' for component '_org.springframework.integration.errorLogger'
+23:41:38.247 INFO  Summary on shutdown: org.springframework.cloud.stream.binding.StreamListenerMessageHandler@28b7646

@@ -33,7 +33,7 @@
     <modules>
         <module>service-dadata</module>
         <module>service-database</module>
-        <module>gateway-service-config</module>
+        <module>gateway-service</module>
     </modules>
 
     <repositories>
