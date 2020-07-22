@@ -6,10 +6,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.filter.CommonsRequestLoggingFilter;
 
 @SpringBootApplication
-public class DadataServiceApplication {
+public class ServiceDadata {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DadataServiceApplication.class, args);
+		SpringApplication.run(ServiceDadata.class, args);
 	}
 
 	@Bean

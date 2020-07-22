@@ -3,7 +3,7 @@ spring:
     name: gateway-service
   cloud:
     consul:
-      host: 127.0.0.1
+      host: localhost
       port: 8500
       
 logging:
