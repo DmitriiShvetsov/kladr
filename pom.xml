@@ -37,6 +37,7 @@
         <module>gateway-service</module>
     </modules>
 
+
     <repositories>
         <repository>
             <id>spring-milestones</id>
