@@ -5,7 +5,6 @@ spring:
   cloud:
     consul:
       discovery:
-        prefer-ip-address: true
         instanceId: ${spring.application.name}:${server.port}:${random.value}
 
 management:
@@ -15,8 +14,6 @@ management:
         include: "*"
 
 logging.level:
-    org.springframework:
-      cloud.consul: DEBUG
-      org.springframework.web.filter.CommonsRequestLoggingFilter: DEBUG
-
+    org.springframework.cloud:
+      consul: DEBUG
 

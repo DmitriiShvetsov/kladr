@@ -1,43 +1,47 @@
 package com.test.kladr.route.controller;
 
-
-import com.test.kladr.route.model.Kladr;
-import com.test.kladr.route.remote.DadataClient;
-import com.test.kladr.route.remote.DatabaseClient;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
-
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
 @RestController
 public class RouteController {
 
-	private boolean goToDatabase = true;
-	
-	@Autowired
-	DadataClient dadataClient;
-	@Autowired
-	DatabaseClient databaseClient;
+    private RestTemplate restTemplate;
 
-	@GetMapping(value = "/{codeKladr}")
-	public Kladr read(@PathVariable(name = "codeKladr") long codeKladr) {
+    private boolean goToDatabase = true;
+    private final String urlDadata = "http://service-dadata/";
+    private final String urlDatabase = "http://service-database/";
 
-		if (goToDatabase){
-			return databaseClient.getKladrByCodeKladr(codeKladr);
-		}else {
-			return dadataClient.getKladrByCodeKladr(codeKladr);
-		}
-	}
+    public RouteController(RestTemplate restTemplate) {
+        this.restTemplate = restTemplate;
+    }
 
-	@GetMapping(value = "/change_to_database")
-	public void changeToDatabase() {
-		goToDatabase = true;
-	}
+    @GetMapping(value = "/{codeKladr}")
+    public ResponseEntity<String> goDadata(@PathVariable(name = "codeKladr") long codeKladr) {
+        String url;
+        if (goToDatabase) {
+            url = urlDatabase;
+        } else {
+            url = urlDadata;
+        }
 
-	@GetMapping(value = "/change_to_dadata")
-	public void changeToDadata() {
-		goToDatabase = false;
-	}
+        ResponseEntity<String> responseEntity =
+                restTemplate.getForEntity(url + codeKladr, String.class);
+        String response = responseEntity.getBody();
+
+        return ResponseEntity.ok(response);
+    }
+
+    @GetMapping(value = "/change_to_database")
+    public void changeToDatabase() {
+        goToDatabase = true;
+    }
+
+    @GetMapping(value = "/change_to_dadata")
+    public void changeToDadata() {
+        goToDatabase = false;
+    }
 
 }

@@ -21,5 +21,5 @@ public class ServiceDatabase {
 		loggingFilter.setAfterMessagePrefix("REQ:");
 		return loggingFilter;
 	}
-
 }
+
