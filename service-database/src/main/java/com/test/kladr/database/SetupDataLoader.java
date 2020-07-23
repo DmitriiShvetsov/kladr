@@ -1,4 +1,4 @@
-package com.test.kladr.database;//package ru.experio.invoice.web;
+package com.test.kladr.database;
 
 import com.test.kladr.database.model.Kladr;
 import com.test.kladr.database.repository.KladrRepository;

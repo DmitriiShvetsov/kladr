@@ -1,20 +1,20 @@
 spring:  
   application:
-    name: gateway-service
+    name: service-gateway
   cloud:
     gateway:
       discovery:
         locator:
           enabled: true
       routes:
-        - id: dadata-service
-          uri: lb://dadata-service
+        - id: service-dadata
+          uri: lb://service-dadata
           predicates:
             - Path=/dadata/**
           filters:
             - RewritePath=/dadata/(?<path>.*), /$\{path}
-        - id: customer-service
-          uri: lb://database-service
+        - id: service-database
+          uri: lb://service-database
           predicates:
             - Path=/database/**
           filters:

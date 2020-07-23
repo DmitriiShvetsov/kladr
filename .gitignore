@@ -3,10 +3,6 @@ logs/*
 
 .idea/*
 
-gateway-service-config/target/*
-gateway-service-config/logs/*
-gateway-service-config/.mvn/*
-
 service-dadata/target/*
 service-dadata/logs/*
 service-dadata/.mvn/*
@@ -18,6 +14,10 @@ service-database/.mvn/*
 service-route/target/*
 service-route/logs/
 service-route/.mvn/*
+
+service-gateway/target/*
+service-gateway/logs/
+service-gateway/.mvn/*
 
 *.swp
 *.iml

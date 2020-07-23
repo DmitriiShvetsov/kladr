@@ -34,7 +34,7 @@
         <module>service-dadata</module>
         <module>service-database</module>
         <module>service-route</module>
-        <module>gateway-service</module>
+        <module>service-gateway</module>
     </modules>
 
     <repositories>
