@@ -18,5 +18,21 @@ docker rm kladr_consul_1 &&
 docker rm kladr_service-route_1 &&
 docker rm kladr_service-database_1    &&
 docker rm kladr_service-dadata_1  &&
-docker stop $(docker ps -a -q) && docker rm kladr_consul_1 && docker rm kladr_service-dadata_1  &&  docker rm kladr_service-route_1  && docker rm kladr_service-database_1
+docker rm kladr_postgres_1 &&
+docker stop $(docker ps -a -q) && docker rm kladr_consul_1 && docker rm kladr_service-dadata_1  &&  docker rm kladr_service-route_1  && docker rm kladr_service-database_1 && docker rm kladr_postgres_1
 
+curl -s -XPUT -d"{
+  \"Name\": \"postgres\",
+  \"ID\": \"postgres\",
+  \"Tags\": [ \"postgres\" ],
+  \"Address\": \"localhost\",
+  \"Port\": 5432,
+  \"Check\": {
+    \"Name\": \"PostgreSQL TCP on port 5432\",
+    \"ID\": \"postgres\",
+    \"Interval\": \"10s\",
+    \"TCP\": \"postgres:5432\",
+    \"Timeout\": \"1s\",
+    \"Status\": \"passing\"
+  }
+}" localhost:8500/v1/agent/service/register

@@ -17,7 +17,7 @@ services:
     networks:
       - consul-net
     ports:
-      - 5430:5430
+      - 5432:5432
     environment:
       POSTGRES_PASSWORD: password
       POSTGRES_DB: kladr
@@ -54,4 +54,3 @@ services:
 
 networks:
   consul-net:
-    driver: bridge
