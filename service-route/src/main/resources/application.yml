@@ -1,23 +1,21 @@
-spring:  
-  application:
-    name: service-route
+server:
+  port: 7000
 
-logging:
-  level:
-    org.springframework.web.filter.CommonsRequestLoggingFilter: DEBUG
+spring:
+  cloud:
+    consul:
+      discovery:
+        instanceId: ${spring.application.name}:${server.port}:${random.value}
 
-#---
-#spring:
-#  profiles: zone1
-#  cloud:
-#    consul:
-#      discovery:
-#        instanceZone: zone1
-#
-#---
-#spring:
-#  profiles: zone2
-#  cloud:
-#    consul:
-#      discovery:
-#        instanceZone: zone2
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+logging.level:
+    org.springframework:
+      cloud.consul: DEBUG
+      org.springframework.web.filter.CommonsRequestLoggingFilter: DEBUG
+
+

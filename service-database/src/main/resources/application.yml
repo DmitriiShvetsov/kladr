@@ -1,44 +1,41 @@
+server:
+  port: 7000
+
 spring:
+  cloud:
+    consul:
+      discovery:
+        instanceId: ${spring.application.name}:${server.port}:${random.value}
+
   datasource:
     url: jdbc:h2:mem:testdb
     driverClassName: org.h2.Driver
     username: sa
     password: password
-#    url: jdbc:mysql://localhost:3306/kladr?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
-#    username: kladr
-#    password: kladr
+    #    url: jdbc:mysql://localhost:3306/kladr?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    #    username: kladr
+    #    password: kladr
   h2:
     console:
       enabled: true
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto : update
+      ddl-auto: update
     properties:
-      hibernate.dialect : org.hibernate.dialect.H2Dialect
+      hibernate.dialect: org.hibernate.dialect.H2Dialect
 
   #      hibernate.dialect : org.hibernate.dialect.MySQL5Dialect
-  application:
-    name: database-service
 
-  output.ansi.enabled: ALWAYS
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 
-logging:
-  level:
-    org.springframework.web.filter.CommonsRequestLoggingFilter: DEBUG
+logging.level:
+    org.springframework:
+      cloud.consul: DEBUG
+      org.springframework.web.filter.CommonsRequestLoggingFilter: DEBUG
 
-#---
-#spring:
-#  profiles: zone1
-#  cloud:
-#    consul:
-#      discovery:
-#        instanceZone: zone1
-#
-#---
-#spring:
-#  profiles: zone2
-#  cloud:
-#    consul:
-#      discovery:
-#        instanceZone: zone2
+

@@ -1,32 +1,8 @@
-spring:  
+spring:
   application:
-    name: database-service
+    name: service-database
   cloud:
     consul:
-      host: localhost
+      enabled: true
+      host: consul
       port: 8500
-      discovery:
-        instance-id: "${spring.application.name}:${random.int[1,999999]}"
-
-logging:
-  level:
-    org.springframework.web.filter.CommonsRequestLoggingFilter: DEBUG
-
-server:
-  port: 0
-
-#---
-#spring:
-#  profiles: zone1
-#  cloud:
-#    consul:
-#      discovery:
-#        instanceZone: zone1
-#
-#---
-#spring:
-#  profiles: zone2
-#  cloud:
-#    consul:
-#      discovery:
-#        instanceZone: zone2

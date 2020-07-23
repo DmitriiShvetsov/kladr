@@ -4,9 +4,10 @@ package com.test.kladr.route.controller;
 import com.test.kladr.route.model.Kladr;
 import com.test.kladr.route.remote.DadataClient;
 import com.test.kladr.route.remote.DatabaseClient;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController

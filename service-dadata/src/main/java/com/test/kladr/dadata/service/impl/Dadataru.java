@@ -2,14 +2,11 @@ package com.test.kladr.dadata.service.impl;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.test.kladr.dadata.model.Kladr;
 import com.test.kladr.dadata.service.KladrServiceDadata;
 import lombok.extern.slf4j.Slf4j;
-
-
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Service;
-
 
 import java.io.IOException;
 import java.net.URI;

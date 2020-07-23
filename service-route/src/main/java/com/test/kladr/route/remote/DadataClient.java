@@ -5,7 +5,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-@FeignClient(name = "dadata-service")
+@FeignClient(name = "service-dadata", url = "http://service-dadata")
 public interface DadataClient {
 
 	@GetMapping("/{codeKladr}")

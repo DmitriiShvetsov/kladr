@@ -3,9 +3,9 @@ logs/*
 
 .idea/*
 
-gateway-service-config/target/*
-gateway-service-config/logs/*
-gateway-service-config/.mvn/*
+service-gateway/target/*
+service-gateway/logs/*
+service-gateway/.mvn/*
 
 service-dadata/target/*
 service-dadata/logs/*

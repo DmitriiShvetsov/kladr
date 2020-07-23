@@ -1,8 +1,8 @@
 package com.test.kladr.database.service.impl;
 
-import com.test.kladr.database.service.KladrServiceDatabase;
 import com.test.kladr.database.model.Kladr;
 import com.test.kladr.database.repository.KladrRepository;
+import com.test.kladr.database.service.KladrServiceDatabase;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

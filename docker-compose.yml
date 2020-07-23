@@ -1,0 +1,56 @@
+version: '3.5'
+
+services:
+
+  consul:
+    image: consul:1.7
+    command: agent -server -ui -node=server1 -bootstrap-expect=1 -client=0.0.0.0
+    ports:
+      - "8500:8500"
+      - "8600:8600/udp"
+    networks:
+      - consul-net
+
+  service-database:
+    restart: on-failure
+    build:
+      context: service-database
+      dockerfile: docker/DockerFile
+    ports:
+      - "7000:7000"
+    networks:
+      - consul-net
+
+  service-dadata:
+    restart: on-failure
+    build:
+      context: service-dadata
+      dockerfile: docker/DockerFile
+    ports:
+      - "7010:7000"
+    networks:
+      - consul-net
+
+  service-route:
+    restart: on-failure
+    build:
+      context: service-route
+      dockerfile: docker/DockerFile
+    ports:
+      - "7020:7000"
+    networks:
+      - consul-net
+
+  service-gateway:
+    restart: on-failure
+    build:
+      context: service-gateway
+      dockerfile: docker/DockerFile
+    ports:
+      - "7080:7080"
+    networks:
+      - consul-net
+
+networks:
+  consul-net:
+    driver: bridge

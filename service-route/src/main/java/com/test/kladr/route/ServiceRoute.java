@@ -9,10 +9,10 @@ import org.springframework.web.filter.CommonsRequestLoggingFilter;
 
 @SpringBootApplication
 @EnableFeignClients
-public class RouteApplication {
+public class ServiceRoute {
 	
 	public static void main(String[] args) {
-		SpringApplication.run(RouteApplication.class, args);
+		SpringApplication.run(ServiceRoute.class, args);
 	}
 
 

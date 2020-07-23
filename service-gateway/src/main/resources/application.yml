@@ -1,20 +1,18 @@
-spring:  
-  application:
-    name: gateway-service
+spring:
   cloud:
     gateway:
       discovery:
         locator:
           enabled: true
       routes:
-        - id: dadata-service
-          uri: lb://dadata-service
+        - id: service-dadata
+          uri: lb://service-dadata
           predicates:
             - Path=/dadata/**
           filters:
             - RewritePath=/dadata/(?<path>.*), /$\{path}
-        - id: customer-service
-          uri: lb://database-service
+        - id: service-database
+          uri: lb://service-database
           predicates:
             - Path=/database/**
           filters:
@@ -26,9 +24,15 @@ spring:
           filters:
             - RewritePath=/kladr/(?<path>.*), /$\{path}
 
-
-logging.level.com.netflix: DEBUG
-    
 management:
-  security:
-    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+logging.level:
+    org.springframework:
+      cloud.consul: DEBUG
+      org.springframework.web.filter.CommonsRequestLoggingFilter: DEBUG
+
+
