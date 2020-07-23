@@ -5,6 +5,7 @@ spring:
   cloud:
     consul:
       discovery:
+        prefer-ip-address: true
         instanceId: ${spring.application.name}:${server.port}:${random.value}
 
   datasource:

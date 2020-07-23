@@ -12,10 +12,12 @@ curl -L http://localhost:7020/change_to_database
 
 docker stop $(docker ps -a -q)
 docker ps -a
-docker rm microservice-with-docker-compose-and-consul-master_consul_1
-docker rm microservice-with-docker-compose-and-consul-master_service-database_1
-docker rm microservice-with-docker-compose-and-consul-master_service-dadata_1
-docker rm microservice-with-docker-compose-and-consul-master_service-route_1
-docker rm microservice-with-docker-compose-and-consul-master_service-gateway_1
+docker rm kladr_consul_1
+docker rm kladr_service-database_1
+docker rm kladr_service-dadata_1
+docker rm kladr_service-route_1
+docker rm kladr_service-gateway_1
 
-docker stop $(docker ps -a -q)     && docker rm microservice-with-docker-compose-and-consul-master_consul_1  && docker rm microservice-with-docker-compose-and-consul-master_service-database_1 && docker rm microservice-with-docker-compose-and-consul-master_service-dadata_1 && docker rm microservice-with-docker-compose-and-consul-master_service-route_1 && docker rm microservice-with-docker-compose-and-consul-master_service-gateway_1 && docker ps -a
+docker stop $(docker ps -a -q)     && docker rm kladr_consul_1  && docker rm kladr_service-database_1 && docker rm kladr_service-dadata_1 && docker rm kladr_service-route_1 && docker rm kladr_service-gateway_1 && docker ps -a
+
+docker stop $(docker ps -a -q)     && docker rm kladr_consul_1  && docker rm kladr_service-database_1 && docker rm kladr_service-dadata_1 && docker-compose up -d --build  && docker-compose logs -f
