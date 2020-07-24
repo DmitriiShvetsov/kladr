@@ -8,4 +8,4 @@ spring:
       port: 8500
 
 server:
-  port: ${PORT:7080}
+  port: 7000

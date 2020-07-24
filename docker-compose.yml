@@ -53,6 +53,22 @@ services:
     networks:
       - consul-net
 
+  service-gateway:
+    restart: on-failure
+    build:
+      context: service-gateway
+      dockerfile: docker/DockerFile
+    ports:
+      - "7030:7000"
+    networks:
+      - consul-net
+    depends_on:
+      - mysql-standalone
+      - service-database
+      - service-dadata
+      - service-route
+
+
 networks:
   consul-net:
     driver: bridge
