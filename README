@@ -1,27 +1,31 @@
-Requirements :
-curl, docker and docker-compose installed.
+build + logs
+docker-compose up -d --build  && docker-compose logs -f
 
+build with many services + logs
+docker-compose up -d --build --scale service-database=2 --scale service-dadata=2 && docker-compose logs -f
 
+docker stop $(docker ps -a -q)
+docker ps -a
+docker rm kladr_consul_1
+docker rm kladr_mysql-standalone_1
+docker rm kladr_service-database_1
+docker rm kladr_service-route_1
+docker rm kladr_service-dadata_1
+docker rm kladr_service-gateway_1
 
+stop and delete:
+docker stop $(docker ps -a -q) && docker rm kladr_consul_1 && docker rm kladr_mysql-standalone_1 &&  docker rm kladr_service-dadata_1  &&  docker rm kladr_service-route_1  && docker rm  kladr_service-gateway_1 && docker rm kladr_service-database_1
+
+stop, delete, build, logs:
+docker stop $(docker ps -a -q) && docker rm kladr_consul_1 && docker rm kladr_mysql-standalone_1 &&  docker rm kladr_service-dadata_1  &&  docker rm kladr_service-route_1  && docker rm  kladr_service-gateway_1 && docker rm kladr_service-database_1 && docker-compose up -d --build  && docker-compose logs -f
+
+comands
 curl -L http://localhost:7020/5200400005400/
 curl -L http://localhost:7020/change_to_dadata
 curl -L http://localhost:7020/5200400005400/
 curl -L http://localhost:7020/change_to_database
-
-docker-compose up -d --build  && docker-compose logs -f
-docker-compose up -d --build --scale service-database=2 --scale service-dadata=2 && docker-compose logs -f
-
-
-docker stop $(docker ps -a -q)
-docker ps -a
-docker rm kladr_consul_1 &&
-docker rm kladr_mysql-standalone_1 &&
-docker rm kladr_service-database_1    &&
-docker rm kladr_service-route_1 &&
-docker rm kladr_service-dadata_1  &&
-docker rm kladr_service-gateway_1 &&
-
-docker stop $(docker ps -a -q) && docker rm kladr_consul_1 && docker rm kladr_mysql-standalone_1 &&  docker rm kladr_service-dadata_1  &&  docker rm kladr_service-route_1  && docker rm  kladr_service-gateway_1 && docker rm kladr_service-database_1
-
-docker stop $(docker ps -a -q) && docker rm kladr_consul_1 && docker rm kladr_mysql-standalone_1 &&  docker rm kladr_service-dadata_1  &&  docker rm kladr_service-route_1  && docker rm  kladr_service-gateway_1 && docker rm kladr_service-database_1 && docker-compose up -d --build  && docker-compose logs -f
-
+curl -L http://localhost:7030/kladr/5200400005400
+curl -L http://localhost:7030/kladr/change_to_database
+curl -L http://localhost:7030/kladr/change_to_dadata
+curl -L http://localhost:7030/database/5200400005400
+curl -L http://localhost:7030/dadata/5200400005400

@@ -4,13 +4,13 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-public abstract class RemoteDatabaseServiceImpl {
+public abstract class RemoteDatabaseService {
 
     protected Properties properties;
 
-    public RemoteDatabaseServiceImpl() {
+    public RemoteDatabaseService() {
         try {
-            InputStream inputStream = RemoteDatabaseServiceImpl.class.getClassLoader().getResourceAsStream("dadata.properties");
+            InputStream inputStream = RemoteDatabaseService.class.getClassLoader().getResourceAsStream("dadata.properties");
 
             this.properties = new Properties();
 

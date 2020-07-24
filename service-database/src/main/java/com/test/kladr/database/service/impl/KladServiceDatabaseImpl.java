@@ -19,11 +19,6 @@ public class KladServiceDatabaseImpl implements KladrServiceDatabase {
     }
 
     @Override
-    public List<Kladr> findAll() {
-        return kladrRepository.findAll();
-    }
-
-    @Override
     public Kladr getKladrByCodeKladr(Long codeKladr) {
         return kladrRepository.findByCodeKladr(codeKladr);
     }

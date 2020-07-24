@@ -18,7 +18,7 @@ import java.util.HashMap;
 
 @Slf4j
 @Service
-public class Dadataru extends RemoteDatabaseServiceImpl implements KladrServiceDadata {
+public class Dadataru extends RemoteDatabaseService implements KladrServiceDadata {
 
     public Kladr getKladrByCodeKladr(Long codeKladr) {
 

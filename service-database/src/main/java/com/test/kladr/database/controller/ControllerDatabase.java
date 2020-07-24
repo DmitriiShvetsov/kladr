@@ -24,7 +24,7 @@ public class ControllerDatabase {
     }
 
     @GetMapping(value = "/{codeKladr}")
-    public Kladr read2(@PathVariable(name = "codeKladr") long codeKladr) {
+    public Kladr read(@PathVariable(name = "codeKladr") long codeKladr) {
         final Kladr kladr = kladrServiceDatabase.getKladrByCodeKladr(codeKladr);
         logger.info(instanceId + " get codeKladr = " + codeKladr + "\t " + kladr);
 

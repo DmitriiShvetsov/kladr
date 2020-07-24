@@ -6,8 +6,6 @@ import java.util.List;
 
 public interface KladrServiceDatabase {
 
-    List<Kladr> findAll();
-
     Kladr getKladrByCodeKladr(Long id);
 
 }

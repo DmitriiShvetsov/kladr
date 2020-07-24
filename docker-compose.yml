@@ -3,7 +3,7 @@ version: '3.5'
 services:
 
   consul:
-    image: consul:1.6.3
+    image: consul:1.8.0
     command: agent -server -ui -node=server1 -bootstrap-expect=1 -client=0.0.0.0
     ports:
       - "8500:8500"

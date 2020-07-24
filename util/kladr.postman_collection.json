@@ -1,0 +1,357 @@
+{
+	"info": {
+		"_postman_id": "487fe40f-bf44-4ce1-9d45-406a163c510d",
+		"name": "kladr",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "gateway",
+			"item": [
+				{
+					"name": "kladr",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7030/kladr/5200400005400",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7030",
+							"path": [
+								"kladr",
+								"5200400005400"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change_to_database",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7030/kladr/change_to_database",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7030",
+							"path": [
+								"kladr",
+								"change_to_database"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change_to_dadata",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7030/kladr/change_to_dadata",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7030",
+							"path": [
+								"kladr",
+								"change_to_dadata"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "database id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7030/database/5200400005400",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7030",
+							"path": [
+								"database",
+								"5200400005400"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "dadata id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7030/dadata/5200400005400",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7030",
+							"path": [
+								"dadata",
+								"5200400005400"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "9160dc3c-c30a-4393-9c0c-e26945740816",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "ae6d5d1f-fc58-418e-b9aa-a92b5e279b06",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "route",
+			"item": [
+				{
+					"name": "get kladr by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7020/5200400005400",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7020",
+							"path": [
+								"5200400005400"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change_to_database",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7020/change_to_database",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7020",
+							"path": [
+								"change_to_database"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change_to_dadata",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7020/change_to_dadata",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7020",
+							"path": [
+								"change_to_dadata"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "835b81ba-7abc-4dde-9dc9-7cefd0c61391",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "474208d1-8408-49a6-9ab0-958d6c189636",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "database",
+			"item": [
+				{
+					"name": "get kladr by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7000/5200400005400",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"5200400005400"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "aee73b05-c367-4964-a801-bc03e2d80ae5",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "944ca976-e7c3-49df-bd68-696e42336e07",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "dadata",
+			"item": [
+				{
+					"name": "get kladr by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7000/5200400005400",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"5200400005400"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "ef4f1c25-ed09-44ac-b0bb-3d34aa1a1187",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "6ed40e5d-4d68-4406-bd66-08aa9d2df813",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "bik dadata.ru",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Token aaf0d8b717dd513cee2c6ecd9250336c88dab303"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n\t\"query\": \"5200400005400\" \n\t\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://suggestions.dadata.ru/suggestions/api/4_1/rs/findById/address",
+					"protocol": "https",
+					"host": [
+						"suggestions",
+						"dadata",
+						"ru"
+					],
+					"path": [
+						"suggestions",
+						"api",
+						"4_1",
+						"rs",
+						"findById",
+						"address"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
