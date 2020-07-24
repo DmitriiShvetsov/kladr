@@ -1,6 +1,6 @@
 package com.test.kladr.route.controller;
 
-import org.springframework.http.MediaType;
+import com.test.kladr.route.model.Kladr;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
@@ -19,7 +19,7 @@ public class RouteController {
     }
 
     @GetMapping(value = "/{codeKladr}")
-    public ResponseEntity<String> goDadata(@PathVariable(name = "codeKladr") long codeKladr) {
+    public ResponseEntity<Kladr> goDadata(@PathVariable(name = "codeKladr") long codeKladr) {
         String url;
         if (goToDatabase) {
             url = urlDatabase;
@@ -27,9 +27,9 @@ public class RouteController {
             url = urlDadata;
         }
 
-        ResponseEntity<String> responseEntity =
-                restTemplate.getForEntity(url + codeKladr, String.class);
-        String response = responseEntity.getBody();
+        ResponseEntity<Kladr> responseEntity =
+                restTemplate.getForEntity(url + codeKladr, Kladr.class);
+        Kladr response = responseEntity.getBody();
 
         return ResponseEntity.ok(response);
     }

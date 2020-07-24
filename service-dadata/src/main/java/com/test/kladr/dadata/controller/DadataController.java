@@ -25,12 +25,12 @@ public class DadataController {
     }
 
     @GetMapping(value = "/{codeKladr}")
-    public ResponseEntity<String>  read4(@PathVariable(name = "codeKladr") long codeKladr) {
+    public ResponseEntity<Kladr>  read4(@PathVariable(name = "codeKladr") long codeKladr) {
         final Kladr kladr = kladrServiceDadata.getKladrByCodeKladr(codeKladr);
 
         logger.info(instanceId + " get codeKladr = " + codeKladr + "\t " + kladr);
 
-        return ResponseEntity.ok(kladr.toString());
+        return ResponseEntity.ok(kladr);
     }
 
 }

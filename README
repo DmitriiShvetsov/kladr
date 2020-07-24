@@ -15,8 +15,9 @@ docker-compose up -d --build --scale service-database=2 --scale service-dadata=2
 docker stop $(docker ps -a -q)
 docker ps -a
 docker rm kladr_consul_1 &&
-docker rm kladr_service-route_1 &&
+docker rm kladr_mysql-standalone_1 &&
 docker rm kladr_service-database_1    &&
+docker rm kladr_service-route_1 &&
 docker rm kladr_service-dadata_1  &&
-docker stop $(docker ps -a -q) && docker rm kladr_consul_1 && docker rm kladr_service-dadata_1  &&  docker rm kladr_service-route_1  && docker rm kladr_service-database_1
+docker stop $(docker ps -a -q) && docker rm kladr_consul_1 && docker rm kladr_mysql-standalone_1 &&  docker rm kladr_service-dadata_1  &&  docker rm kladr_service-route_1  && docker rm kladr_service-database_1
 
