@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("/database")
 public class ControllerDatabase {
 
     private static final Logger logger = LoggerFactory.getLogger(ControllerDatabase.class);

@@ -6,13 +6,14 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 @RestController
+@RequestMapping("/route")
 public class RouteController {
 
     private RestTemplate restTemplate;
 
     private boolean goToDatabase = true;
-    private final String urlDadata = "http://service-dadata/";
-    private final String urlDatabase = "http://service-database/";
+    private final String urlDadata = "http://service-dadata/dadata/";
+    private final String urlDatabase = "http://service-database/database/";
 
     public RouteController(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;

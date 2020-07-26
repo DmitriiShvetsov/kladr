@@ -31,6 +31,7 @@ services:
     networks:
       - consul-net
     depends_on:
+      - consul
       - mysql-standalone
 
   service-dadata:
@@ -42,6 +43,8 @@ services:
       - "7006-7010:7000"
     networks:
       - consul-net
+    depends_on:
+      - consul
 
   service-route:
     restart: on-failure
@@ -52,6 +55,8 @@ services:
       - "7020:7000"
     networks:
       - consul-net
+    depends_on:
+      - consul
 
   service-gateway:
     restart: on-failure
@@ -67,7 +72,6 @@ services:
       - service-database
       - service-dadata
       - service-route
-
 
 networks:
   consul-net:

@@ -20,12 +20,32 @@ stop, delete, build, logs:
 docker stop $(docker ps -a -q) && docker rm kladr_consul_1 && docker rm kladr_mysql-standalone_1 &&  docker rm kladr_service-dadata_1  &&  docker rm kladr_service-route_1  && docker rm  kladr_service-gateway_1 && docker rm kladr_service-database_1 && docker-compose up -d --build  && docker-compose logs -f
 
 comands
-curl -L http://localhost:7020/5200400005400/
-curl -L http://localhost:7020/change_to_dadata
-curl -L http://localhost:7020/5200400005400/
-curl -L http://localhost:7020/change_to_database
-curl -L http://localhost:7030/kladr/5200400005400
-curl -L http://localhost:7030/kladr/change_to_database
-curl -L http://localhost:7030/kladr/change_to_dadata
-curl -L http://localhost:7030/database/5200400005400
-curl -L http://localhost:7030/dadata/5200400005400
+
+database 7000-7005
+curl -L http://localhost:7000/database/5200400005400
+http://localhost:7000/swagger-ui/index.html
+
+dadata 7006-7010
+curl -L http://localhost:7006/dadata/5200400005400
+http://localhost:7006/swagger-ui/index.html
+
+route
+curl -L http://localhost:7020/route/5200400005400/
+curl -L http://localhost:7020/route/change_to_dadata
+curl -L http://localhost:7020/route/change_to_database
+http://localhost:7020/swagger-ui/index.html
+
+gateway
+curl -L http://localhost:7030/route/route/5200400005400
+curl -L http://localhost:7030/route/route/change_to_database
+curl -L http://localhost:7030/route/route/change_to_dadata
+http://localhost:7030/route/route/change_to_dadata
+
+curl -L http://localhost:7030/database/database/5200400005400
+http://localhost:7030/database/swagger-ui/index.html
+
+curl -L http://localhost:7030/dadata/dadata/5200400005400
+http://localhost:7030/dadata/swagger-ui/index.html
+
+
+

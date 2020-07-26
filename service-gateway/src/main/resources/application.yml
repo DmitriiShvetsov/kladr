@@ -20,9 +20,9 @@ spring:
         - id: service-route
           uri: lb://service-route
           predicates:
-            - Path=/kladr/**
+            - Path=/route/**
           filters:
-            - RewritePath=/kladr/(?<path>.*), /$\{path}
+            - RewritePath=/route/(?<path>.*), /$\{path}
 
 management:
   endpoints:
