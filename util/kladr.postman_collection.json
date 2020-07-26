@@ -9,19 +9,20 @@
 			"name": "gateway",
 			"item": [
 				{
-					"name": "kladr",
+					"name": "route",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:7030/kladr/5200400005400",
+							"raw": "http://localhost:7030/route/route/5200400005400",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "7030",
 							"path": [
-								"kladr",
+								"route",
+								"route",
 								"5200400005400"
 							]
 						}
@@ -34,14 +35,15 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:7030/kladr/change_to_database",
+							"raw": "http://localhost:7030/route/route/change_to_database",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "7030",
 							"path": [
-								"kladr",
+								"route",
+								"route",
 								"change_to_database"
 							]
 						}
@@ -54,14 +56,15 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:7030/kladr/change_to_dadata",
+							"raw": "http://localhost:7030/route/route/change_to_dadata",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "7030",
 							"path": [
-								"kladr",
+								"route",
+								"route",
 								"change_to_dadata"
 							]
 						}
@@ -74,13 +77,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:7030/database/5200400005400",
+							"raw": "http://localhost:7030/database/database/5200400005400",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "7030",
 							"path": [
+								"database",
 								"database",
 								"5200400005400"
 							]
@@ -94,13 +98,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:7030/dadata/5200400005400",
+							"raw": "http://localhost:7030/dadata/dadata/5200400005400",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "7030",
 							"path": [
+								"dadata",
 								"dadata",
 								"5200400005400"
 							]
@@ -142,13 +147,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:7020/5200400005400",
+							"raw": "http://localhost:7020/route/5200400005400",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "7020",
 							"path": [
+								"route",
 								"5200400005400"
 							]
 						}
@@ -161,13 +167,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:7020/change_to_database",
+							"raw": "http://localhost:7020/route/change_to_database",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "7020",
 							"path": [
+								"route",
 								"change_to_database"
 							]
 						}
@@ -180,13 +187,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:7020/change_to_dadata",
+							"raw": "http://localhost:7020/route/change_to_dadata",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "7020",
 							"path": [
+								"route",
 								"change_to_dadata"
 							]
 						}
@@ -227,13 +235,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:7000/5200400005400",
+							"raw": "http://localhost:7001/database/5200400005400",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "7000",
+							"port": "7001",
 							"path": [
+								"database",
 								"5200400005400"
 							]
 						}
@@ -274,13 +283,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:7000/5200400005400",
+							"raw": "http://localhost:7007/dadata/5200400005400",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "7000",
+							"port": "7007",
 							"path": [
+								"dadata",
 								"5200400005400"
 							]
 						}
